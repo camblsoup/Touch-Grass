@@ -4,6 +4,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -19,6 +20,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mytestapplication.models.Activity
 import com.example.mytestapplication.ui.theme.MyTestApplicationTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     private fun createNotificationChannel() {
@@ -26,9 +30,10 @@ class MainActivity : ComponentActivity() {
             val name = getString(R.string.channel_name)
             val descriptionText = getString(R.string.channel_description)
             val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel(getString(R.string.channel_id), name, importance).apply {
-                description = descriptionText
-            }
+            val channel =
+                NotificationChannel(getString(R.string.channel_id), name, importance).apply {
+                    description = descriptionText
+                }
             val notificationManager = getSystemService(NotificationManager::class.java)
             notificationManager.createNotificationChannel(channel);
         }
@@ -36,14 +41,25 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         createNotificationChannel()
-        var activity = Activity(this, this.resources)
-        activity.generateActivity()
+
+        var geminiAPI = GPTAPI()
+
+        geminiAPI.promptGPT("What is the capital of France?") { response ->
+            if (response != null) {
+                Log.d("API Response", response)
+                // Update UI with the response
+            } else {
+                Log.e("API Error", "Failed to get response")
+            }
+        }
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             MyTestApplicationTheme {
                 Scaffold(
-                    modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    modifier = Modifier.fillMaxSize()
+                ) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)

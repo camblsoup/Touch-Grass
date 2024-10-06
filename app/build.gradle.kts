@@ -41,8 +41,6 @@ android {
 
 dependencies {
 
-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -60,4 +58,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.okhttp3.okhttp.v4110)
     implementation(libs.gson)
+    implementation(libs.generativeai)
 }
