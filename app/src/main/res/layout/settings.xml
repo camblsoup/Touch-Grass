@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/margarine"
+        android:orientation="vertical">
+
+        <!-- name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/margarine"
+            android:text="@string/name"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/margarine"
+            android:hint="@string/placeholder_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"/>
+
+        <!-- email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/margarine"
+            android:text="@string/email"
+            android:textSize="18sp" />
+
+        <!-- email box-->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/margarine"
+            android:hint="@string/placeholder_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"/>
+
+        <!-- spontaneous event time preferences-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/margarine"
+            android:text="@string/start_time"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/selectStartTimeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/margarine"
+            android:text="@string/placeholder_start_time" />
+
+
+        <Button
+            android:id="@+id/selectEndTimeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/margarine"
+            android:text="@string/placeholder_end_time" />
+
+        <!-- back button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/margarine"
+            android:text="@string/back_button" />
+
+
+    </LinearLayout>
+</ScrollView>

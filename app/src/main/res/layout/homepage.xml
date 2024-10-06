@@ -14,13 +14,9 @@
         android:layout_alignParentBottom="true"
         android:background="#00CE04">
 
-        <!-- First ImageButton -->
-
-        <!-- Second ImageButton -->
-
-        <!-- Third ImageButton -->
+        <!-- settings -->
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/settingsbutton"
             android:layout_width="107dp"
             android:layout_height="87dp"
             android:layout_marginStart="16dp"
@@ -29,14 +25,15 @@
             android:contentDescription="@string/settings_icon"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imageButton5"
+            app:layout_constraintEnd_toStartOf="@id/treebutton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/settings" />
 
+        <!-- tree button -->
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/treebutton"
             android:layout_width="113dp"
             android:layout_height="95dp"
             android:layout_marginStart="8dp"
@@ -45,14 +42,15 @@
             android:contentDescription="@string/tree_icon"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imageButton4"
-            app:layout_constraintStart_toEndOf="@id/imageButton3"
+            app:layout_constraintEnd_toStartOf="@id/memoriesbutton"
+            app:layout_constraintStart_toEndOf="@id/settingsbutton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/tree_icon" />
 
+        <!-- memories-->
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/memoriesbutton"
             android:layout_width="103dp"
             android:layout_height="87dp"
             android:layout_marginEnd="16dp"

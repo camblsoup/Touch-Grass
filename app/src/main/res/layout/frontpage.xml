@@ -24,23 +24,27 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="90sp"
+
         tools:ignore="TextContrastCheck" />
 
     <!-- login button -->
 
     <TextView
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="272dp"
         android:layout_marginBottom="100dp"
+        android:background="@android:color/transparent"
         android:fontFamily="@font/margarine"
         android:gravity="center_vertical"
+        android:onClick="navigateToHomepage"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="15"
         android:text="@string/login"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text_color_selector"
         android:textSize="32sp"
         tools:ignore="TextContrastCheck" />
 

@@ -13,6 +13,27 @@
     <!-- title on title pag-->
     <string name="title">TOUCH \t GRASS</string>
 
-    <string name="login">Login</string>
+    <string name="login">Start</string>
+
+    <!-- channel stuff -->
+    <string name="channel_name">My Notification Channel</string>
+    <string name="channel_description">Channel for app notifications</string>
+    <string name="channel_id">my_notification_channel</string>
+
+    <!-- homepage -->
+    <string name="settings_icon">settings</string>
+    <string name="tree_icon">tree</string>
+    <string name="memory_icon">memories</string>
+
+    <!-- settings page -->
+    <string name="name">Name</string>
+    <string name="placeholder_name">Enter your name</string>
+    <string name="email">Email</string>
+    <string name="placeholder_email">Enter your email</string>
+    <string name="start_time">Spontaneous Event Time</string>
+    <string name="placeholder_start_time">Select Start Time</string>
+    <string name="placeholder_end_time">Select End Time</string>
+
+    <string name="back_button"> &lt; Back</string>
 
 </resources>

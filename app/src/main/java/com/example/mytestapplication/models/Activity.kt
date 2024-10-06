@@ -3,11 +3,9 @@ package com.example.mytestapplication.models
 import android.content.Context
 import android.content.res.Resources
 import android.util.Log
-import com.example.mytestapplication.R
 import com.google.gson.Gson
 import java.time.LocalDate
 import java.time.LocalTime
-import kotlin.random.Random
 
 class Activity(
     val context : Context,
@@ -41,8 +39,7 @@ class Activity(
         }
 
         // Call the API using the GPT object
-        gpt.callAPI(context.getString(R.string.default_prompt) + resources.getStringArray(R.array.themes)[rand])
-    }
+        }
 
 
 
