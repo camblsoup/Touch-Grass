@@ -29,7 +29,9 @@
         </activity>
 
         <!-- Register the new HomepageActivity -->
-        <activity android:name=".HomepageActivity" />
+        <activity android:name=".HomePageActivity" />
+
+        <activity android:name=".SettingsActivity" />
 
     </application>
 
