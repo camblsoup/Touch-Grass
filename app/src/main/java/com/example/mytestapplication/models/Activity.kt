@@ -25,12 +25,26 @@ class Activity(
 
     fun generateActivity() {
         val rand = (0..5).random()
-        gpt.callAPI(context.getString(R.string.default_prompt) + resources.obtainTypedArray(R.array.themes).getIndex(rand))
-        Log.d("SOMETHING", gpt.response)
-        val gson = Gson()
-        val jsonResponse = gson.fromJson(gpt.response, Map::class.java)
-        Log.d("SOMETHING", jsonResponse.get("activityName").toString())
+
+        // Set the callback to handle the API response
+        gpt.setResponseCallback { response ->
+            Log.d("SOMETHING", response)  // Log the response string
+
+            // Parse the JSON response using Gson
+            val gson = Gson()
+            val jsonResponse = gson.fromJson(response, Map::class.java)
+
+            // Extract and log the "activityName" from the parsed JSON map
+            jsonResponse?.let {
+                Log.d("SOMETHING", it["activityName"].toString())
+            } ?: Log.d("SOMETHING", "No activityName found")
+        }
+
+        // Call the API using the GPT object
+        gpt.callAPI(context.getString(R.string.default_prompt) + resources.getStringArray(R.array.themes)[rand])
     }
+
+
 
     fun setEndTime(endTime : LocalTime) {
         this.endTime = endTime

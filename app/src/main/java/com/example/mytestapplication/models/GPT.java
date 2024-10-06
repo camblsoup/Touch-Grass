@@ -1,17 +1,12 @@
 package com.example.mytestapplication.models;
 
 import androidx.annotation.NonNull;
-
 import android.util.Log;
-
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
-
-import kotlin.Unit;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -20,30 +15,26 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class GPT{
+public class GPT {
 
-    private String response;
+    public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
-    public static final MediaType JSON
-            = MediaType.get("application/json; charset=utf-8");
-
-
-    String getResponse(){
-        return this.response;
+    // Define an interface for callback
+    public interface ResponseCallback {
+        void onResponse(String response);
     }
 
-    void addResponse(String response){
-        this.response = response;
-    }
+    // Instance of the callback
+    private ResponseCallback responseCallback;
 
+    // Method to set the callback
+    public void setResponseCallback(ResponseCallback callback) {
+        this.responseCallback = callback;
+    }
 
     public void callAPI(String question) {
 
         OkHttpClient client = new OkHttpClient();
-
-        String TAGG = "LOL";
-        Log.d(TAGG, "hi");
-
         String TAG = "JsonExample";
 
         // Create JSON object to represent the API body
@@ -92,10 +83,14 @@ public class GPT{
         // Log the request details for debugging
         Log.d(TAG, request.toString());
 
+        // Asynchronous API call
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                // addResponse("Failed to load response due to " + e.getMessage());
+                // Handle failure
+                if (responseCallback != null) {
+                    responseCallback.onResponse("Failed to load response due to: " + e.getMessage());
+                }
             }
 
             @Override
@@ -103,27 +98,37 @@ public class GPT{
                 if (response.isSuccessful()) {
                     String responseBody = response.body() != null ? response.body().string() : null;
                     if (responseBody != null) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(responseBody);
-                            JSONArray choicesArray = jsonObject.getJSONArray("choices");
+                        Log.d("RawResponse", responseBody);  // Log the raw response for debugging
 
-                            // Get the content of the first choice (the response from the AI)
-                            String result = choicesArray.getJSONObject(0)
-                                    .getJSONObject("message")
-                                    .getString("content");
+                        // Add this check to see if the response is a plain string
+                        if (responseBody.startsWith("{")) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(responseBody);
+                                JSONArray choicesArray = jsonObject.getJSONArray("choices");
 
-                            addResponse(result.trim());
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            addResponse("Failed to parse the response.");
+                                // Get the content of the first choice (the response from the AI)
+                                String result = choicesArray.getJSONObject(0)
+                                        .getJSONObject("message")
+                                        .getString("content");
+
+                                // Trigger the callback with the response
+                                responseCallback.onResponse(result.trim());
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                responseCallback.onResponse("Failed to parse the response.");
+                            }
+                        } else {
+                            // Handle if it's a plain string or invalid JSON
+                            responseCallback.onResponse("Unexpected response format: " + responseBody);
                         }
                     } else {
-                        addResponse("Empty response from the server.");
+                        responseCallback.onResponse("Empty response from the server.");
                     }
                 } else {
-                    addResponse("Failed to load response due to: " + response.body().string());
+                    responseCallback.onResponse("Failed to load response due to: " + response.body().string());
                 }
             }
+
         });
     }
 }
