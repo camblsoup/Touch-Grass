@@ -3,5 +3,5 @@
     <string name="channel_name">Touch Grass</string>
     <string name="channel_description">A new activity is ready!</string>
     <string name="channel_id">TouchGrassActivity</string>
-    <string name="default_prompt">"I'm going to ask you to generate an activity to do. Please give me the activity in the following json format:\n{\n\"activityName\" : {name here}\n\"instructions\" : {instructions here}\n }\n Please format the activity with proper whitespace and newlines if needed.\n The activity is preferably something that can be documented with photo proof.\n Please give me a activity centered around the theme of: "</string>
+    <string name="default_prompt">I\'m going to ask you to generate an activity to do. Please give me the activity in the following json format:\n{\n"activityName" : {name here}\n"instructions" : {instructions here}\n}\nPlease format the activity with proper whitespace and newlines if needed.\nReturn nothing but the JSON do not say anything else.\nThe activity is preferably something that can be documented with photo proof.</string>
 </resources>
