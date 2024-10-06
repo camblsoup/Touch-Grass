@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00CE04">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/icon_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="16dp"
-        android:background="#e0e0e0">
+        android:background="#00CE04"
+        android:gravity="center">
 
-        <!-- First clickable icon -->
-        <ImageView
-            android:id="@+id/icon1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="#"
-            android:contentDescription="@string/icon1_desc"
-            android:onClick="onIconClick" />
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="107dp"
+            android:layout_height="87dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/settings"
+            tools:layout_editor_absoluteX="282dp"
+            tools:layout_editor_absoluteY="-1dp" />
 
-        <!-- Second clickable icon -->
-        <ImageView
-            android:id="@+id/icon2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="#"
-            android:contentDescription="@string/icon2_desc"
-            android:layout_marginStart="16dp"
-            android:onClick="onIconClick" />
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="103dp"
+            android:layout_height="87dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/group_2"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="4dp" />
 
-        <!-- Third clickable icon -->
-        <ImageView
-            android:id="@+id/icon3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="#"
-            android:contentDescription="@string/icon3_desc"
-            android:layout_marginStart="16dp"
-            android:onClick="onIconClick" />
-
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="113dp"
+            android:layout_height="95dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/group_3"
+            tools:layout_editor_absoluteX="149dp"
+            tools:layout_editor_absoluteY="-6dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
