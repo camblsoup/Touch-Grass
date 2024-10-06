@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 
 import android.util.Log;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 
+import kotlin.Unit;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -35,7 +37,7 @@ public class GPT{
     }
 
 
-    void callAPI(String question) {
+    public String callAPI(String question) {
 
         OkHttpClient client = new OkHttpClient();
 
