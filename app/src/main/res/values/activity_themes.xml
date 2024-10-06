@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themes">
+        <item>environment</item>
+        <item>personal health</item>
+        <item>cooking</item>
+        <item>cleaning</item>
+        <item>art</item>
+        <item>learning</item>
+    </string-array>
+</resources>
