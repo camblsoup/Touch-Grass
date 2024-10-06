@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">My Test Application</string>
+
+    <string name="svg1_desc">lake 1</string>
+    <string name="svg2_desc">lake 2</string>
+    <string name="svg3_desc">lake 3</string>
+    <string name="svg4_desc">rock 4</string>
+    <string name="svg5_desc">rock 5</string>
+    <string name="svg6_desc">rock 6</string>
+
+    <string name="svg7_desc">tree 1</string>
+
+    <!-- title on title pag-->
+    <string name="title">TOUCH \t GRASS</string>
+
+    <string name="login">Login</string>
+
 </resources>

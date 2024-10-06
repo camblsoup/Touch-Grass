@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00CE04"
+    android:orientation="vertical">
+
+
+    <!-- title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="306dp"
+        android:layout_marginTop="150dp"
+
+        android:fontFamily="@font/margarine"
+        android:gravity="center_vertical"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="15"
+
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="90sp"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- login button -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/margarine"
+        android:gravity="center_vertical"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="15"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/svg1_desc"
+        android:src="@drawable/lake1.svg" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/svg7_desc" />
+
+</LinearLayout>
+
+
+
