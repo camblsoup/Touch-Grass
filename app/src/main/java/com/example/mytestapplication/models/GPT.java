@@ -37,7 +37,7 @@ public class GPT{
     }
 
 
-    public String callAPI(String question) {
+    public void callAPI(String question) {
 
         OkHttpClient client = new OkHttpClient();
 
@@ -115,13 +115,13 @@ public class GPT{
                             addResponse(result.trim());
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            // addResponse("Failed to parse the response.");
+                            addResponse("Failed to parse the response.");
                         }
                     } else {
-                        // addResponse("Empty response from the server.");
+                        addResponse("Empty response from the server.");
                     }
                 } else {
-                    // addResponse("Failed to load response due to: " + response.body().string());
+                    addResponse("Failed to load response due to: " + response.body().string());
                 }
             }
         });
