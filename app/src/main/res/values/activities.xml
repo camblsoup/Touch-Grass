@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activities">
+        <item>{
+  "activityName": "Nature Scavenger Hunt",
+  "instructions": "1. Create a list of 10 items commonly found in your local park or nature area (e.g., pine cone, specific leaf, bird feather).\n\n2. Take a walk in the designated area and search for each item on your list.\n\n3. Document your finds by taking photos of each item in its natural setting.\n\n4. At the end of the hunt, create a collage or slideshow of your photos to showcase your discoveries."
+}</item>
+        <item>
+            {
+  "activityName": "DIY Tie-Dye T-Shirts",
+  "instructions": "1. Gather materials: plain white t-shirts, fabric dye or tie-dye kit, rubber bands, plastic gloves, and plastic sheets or garbage bags to protect your workspace.\n\n2. Prewash the t-shirts to remove any sizing.\n\n3. Choose your tie-dye technique (e.g., spiral, bullseye, or crumple) and secure the shirt with rubber bands accordingly.\n\n4. Apply the dye to different sections of the shirt according to your chosen design.\n\n5. Let the dye set for the recommended time (usually 6-8 hours) before rinsing.\n\n6. Take photos of each step, especially the finished product, to document your colorful creation!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Garden Planting Day",
+  "instructions": "1. Choose a small area in your garden or a few pots for planting.\n\n2. Decide on the plants or seeds you want to grow (e.g., flowers, herbs, or vegetables).\n\n3. Gather necessary materials: soil, gardening tools, gloves, and watering can.\n\n4. Prepare the soil by tilling or loosening it, and then plant your seeds or seedlings according to the instructions.\n\n5. Water the plants gently and document the planting process with photos.\n\n6. Over the following weeks, take progress photos to track your plants' growth!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Create a Vision Board",
+  "instructions": "1. Gather materials: a large poster board, magazines, scissors, glue, and markers.\n\n2. Set aside some quiet time to reflect on your goals and aspirations for the upcoming year.\n\n3. Flip through magazines and cut out images, words, or phrases that resonate with your goals.\n\n4. Arrange and glue the cutouts onto the poster board in a way that feels inspiring to you.\n\n5. Once complete, take a photo of your vision board to document your creative process and the goals you want to manifest.\n\n6. Hang your vision board somewhere you’ll see it daily!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Community Clean-Up Challenge",
+  "instructions": "1. Gather a group of friends or family members and choose a local park, beach, or neighborhood area that needs cleaning.\n\n2. Equip yourselves with trash bags, gloves, and recycling bins if available.\n\n3. Set a time limit (e.g., 1-2 hours) to collect as much litter as possible while enjoying the outdoors.\n\n4. Document the process by taking before-and-after photos of the area, as well as pictures of the trash collected.\n\n5. After the clean-up, celebrate your efforts with a picnic or group activity, and take a group photo to commemorate your impact on the environment!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Mindfulness Nature Walk",
+  "instructions": "1. Choose a quiet nature trail or park for your walk, preferably somewhere serene.\n\n2. Before starting, take a few deep breaths to center yourself and set an intention for the walk (e.g., to be present, to observe nature).\n\n3. As you walk, focus on your surroundings: the sounds of birds, the rustling leaves, and the feeling of the ground beneath your feet.\n\n4. Pause periodically to take photos of anything that catches your eye, such as interesting plants, landscapes, or wildlife.\n\n5. After your walk, find a peaceful spot to sit, reflect on your experience, and write down your thoughts or feelings.\n\n6. Document the entire journey with photos and notes, creating a visual and written record of your mindfulness experience."
+}
+        </item>
+        <item>
+            {
+  "activityName": "Self-Care Spa Day at Home",
+  "instructions": "1. Set aside a few hours for yourself in a quiet space at home, free from distractions.\n\n2. Gather supplies for your spa day: candles, essential oils, face masks, soothing music, and your favorite snacks or herbal tea.\n\n3. Start with a relaxing bath or shower, using your favorite products to cleanse and unwind.\n\n4. Create a calming atmosphere with soft lighting and soothing sounds.\n\n5. Treat yourself to a DIY facial mask and spend some time pampering your skin.\n\n6. Take photos of your setup, the products you used, and your relaxed self to document your self-care day.\n\n7. Conclude with journaling about your experience, reflecting on how you feel afterward."
+}
+        </item>
+        <item>
+            {
+  "activityName": "Culinary Adventure: International Cuisine Night",
+  "instructions": "1. Choose a country whose cuisine you'd like to explore (e.g., Italy, Japan, Mexico).\n\n2. Research traditional dishes from that country and select a few recipes to try.\n\n3. Create a shopping list of ingredients needed and visit your local grocery store or market.\n\n4. Set up your cooking space, gathering all necessary tools and ingredients.\n\n5. Follow the recipes to prepare the dishes, taking photos at each stage of the cooking process.\n\n6. Once everything is ready, set a table and enjoy your meal, capturing a photo of the final presentation.\n\n7. Document your culinary adventure with a photo collage of the cooking process and the final dishes!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Bake and Share: Cookie Decorating Party",
+  "instructions": "1. Gather your ingredients for basic sugar cookies: flour, sugar, butter, eggs, and vanilla.\n\n2. Prepare the cookie dough following your favorite recipe, then chill it in the fridge for about 30 minutes.\n\n3. Preheat your oven and roll out the dough to cut into fun shapes using cookie cutters.\n\n4. Bake the cookies according to the recipe, then let them cool completely.\n\n5. Set up a decorating station with various icing colors, sprinkles, and edible decorations.\n\n6. Invite friends or family to join in the decorating fun, taking photos of everyone’s creative designs.\n\n7. Share your decorated cookies with others, capturing the joy of the experience in photos to document the fun!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Outdoor Fitness Circuit Challenge",
+  "instructions": "1. Choose a local park or outdoor space with enough room to set up your circuit.\n\n2. Plan a series of 5-7 fitness stations, such as:\n   - Jumping jacks\n   - Push-ups\n   - Squats\n   - Lunges\n   - Plank holds\n   - Burpees\n   - Stretching.\n\n3. Mark each station with signs or cones to indicate where participants should go.\n\n4. Invite friends or family to join you for the challenge, explaining the circuit and how long to spend at each station (e.g., 30 seconds).\n\n5. Start the circuit together, documenting the workout with photos at each station.\n\n6. After completing the circuit, gather for a group photo to celebrate your effort and commitment to fitness."
+}
+        </item>
+        <item>
+{
+  "activityName": "Declutter and Organize Challenge",
+  "instructions": "1. Choose a specific area in your home to focus on, such as a closet, garage, or a single room.\n\n2. Set a timer for 1-2 hours to keep the challenge engaging.\n\n3. Gather bins or bags for items to keep, donate, recycle, or throw away.\n\n4. Start by removing everything from the chosen area and sorting items into the designated bins.\n\n5. Clean the space thoroughly before putting back the items you want to keep.\n\n6. Take before-and-after photos of the area to document your progress and transformation.\n\n7. Celebrate your hard work with a small treat or reward once the task is completed!"
+}
+        </item>
+        <item>
+            {
+  "activityName": "Room Refresh: Deep Cleaning Day",
+  "instructions": "1. Select a room in your home that needs a deep clean (e.g., kitchen, bathroom, or living room).\n\n2. Gather your cleaning supplies: vacuum, mop, all-purpose cleaner, cloths, and any specialized cleaners needed.\n\n3. Create a checklist of tasks to complete, such as dusting surfaces, vacuuming, mopping, and organizing.\n\n4. Set a timer for each task to keep you motivated and on track.\n\n5. Take before photos of the room to document its starting condition.\n\n6. After completing the cleaning tasks, take after photos to showcase your hard work.\n\n7. Enjoy the refreshed space and perhaps treat yourself to a relaxing activity afterward!"
+}
+        </item>
+    </string-array>
+</resources>
