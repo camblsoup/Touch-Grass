@@ -50,12 +50,6 @@
         android:contentDescription="@string/svg1_desc"
         android:src="@drawable/lake1.svg" />
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/svg7_desc" />
-
 </LinearLayout>
 
 

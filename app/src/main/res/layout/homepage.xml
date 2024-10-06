@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00CE04">
+
+    <LinearLayout
+        android:id="@+id/icon_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#e0e0e0">
+
+        <!-- First clickable icon -->
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="#"
+            android:contentDescription="@string/icon1_desc"
+            android:onClick="onIconClick" />
+
+        <!-- Second clickable icon -->
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="#"
+            android:contentDescription="@string/icon2_desc"
+            android:layout_marginStart="16dp"
+            android:onClick="onIconClick" />
+
+        <!-- Third clickable icon -->
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="#"
+            android:contentDescription="@string/icon3_desc"
+            android:layout_marginStart="16dp"
+            android:onClick="onIconClick" />
+
+    </LinearLayout>
+
+</RelativeLayout>
