@@ -1,18 +1,30 @@
 <resources>
     <string name="app_name">My Test Application</string>
 
+    <!-- stupid assets -->
     <string name="svg1_desc">lake 1</string>
     <string name="svg2_desc">lake 2</string>
     <string name="svg3_desc">lake 3</string>
     <string name="svg4_desc">rock 4</string>
     <string name="svg5_desc">rock 5</string>
     <string name="svg6_desc">rock 6</string>
-
     <string name="svg7_desc">tree 1</string>
 
     <!-- title on title pag-->
     <string name="title">TOUCH \t GRASS</string>
 
+    <!-- login -->
     <string name="login">Login</string>
+
+    <!-- channel -->
+    <string name="channel_name">My Notification Channel</string>
+    <string name="channel_description">Channel for app notifications</string>
+    <string name="channel_id">my_notification_channel</string>
+
+    <!-- homepage -->
+    <string name="settings_icon">settings</string>
+    <string name="memory_icon">memories</string>
+    <string name="tree_icon">tree</string>
+
 
 </resources>

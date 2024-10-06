@@ -6,7 +6,6 @@ class User(
     private var password : String
 ) {
     private var activitiesDone : ArrayList<Activity> = ArrayList()
-    private var nextActivity : Activity? = null;
 
     fun getFirstName() : String {
         return this.firstName
