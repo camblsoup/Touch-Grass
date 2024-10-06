@@ -20,11 +20,24 @@ import okhttp3.Response;
 
 public class GPT{
 
+    String response;
+
     public static final MediaType JSON
             = MediaType.get("application/json; charset=utf-8");
-    OkHttpClient client = new OkHttpClient();
+
+
+    String getResponse(){
+        return this.response;
+    }
+
+    void addResponse(String response){
+        this.response = response;
+    }
+
 
     void callAPI(String question) {
+
+        OkHttpClient client = new OkHttpClient();
 
         String TAGG = "LOL";
         Log.d(TAGG, "hi");
@@ -80,7 +93,7 @@ public class GPT{
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                addResponse("Failed to load response due to " + e.getMessage());
+                // addResponse("Failed to load response due to " + e.getMessage());
             }
 
             @Override
@@ -100,13 +113,13 @@ public class GPT{
                             addResponse(result.trim());
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            addResponse("Failed to parse the response.");
+                            // addResponse("Failed to parse the response.");
                         }
                     } else {
-                        addResponse("Empty response from the server.");
+                        // addResponse("Empty response from the server.");
                     }
                 } else {
-                    addResponse("Failed to load response due to: " + response.body().string());
+                    // addResponse("Failed to load response due to: " + response.body().string());
                 }
             }
         });
