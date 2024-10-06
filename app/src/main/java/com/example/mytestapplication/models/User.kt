@@ -5,7 +5,7 @@ class User(
     private var email : String,
     private var password : String
 ) {
-    private var trees : Int = 0
+    private var activitiesDone : ArrayList<Activity> = ArrayList()
 
     fun getFirstName() : String {
         return this.firstName
@@ -19,11 +19,11 @@ class User(
         return this.password
     }
 
-    fun getTrees() : Int {
-        return this.trees
+    fun getActivitesDone() : ArrayList<Activity> {
+        return this.activitiesDone
     }
 
-    fun incrementTree() {
-        this.trees++
+    fun addActivity(activity : Activity) {
+        this.activitiesDone.add(activity)
     }
 }
