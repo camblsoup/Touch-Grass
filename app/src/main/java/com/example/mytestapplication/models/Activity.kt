@@ -2,7 +2,9 @@ package com.example.mytestapplication.models
 
 import android.content.Context
 import android.content.res.Resources
+import android.util.Log
 import com.example.mytestapplication.R
+import com.google.gson.Gson
 import java.time.LocalDate
 import java.time.LocalTime
 import kotlin.random.Random
@@ -19,9 +21,15 @@ class Activity(
     private var endTime : LocalTime? = null
     private var picture: String? = null
 
+    private val gpt = GPT()
+
     fun generateActivity() {
         val rand = (0..5).random()
-        GPT.callAPI(context.getString(R.string.default_prompt) + resources.obtainTypedArray(R.array.themes).getIndex(rand))
+        gpt.callAPI(context.getString(R.string.default_prompt) + resources.obtainTypedArray(R.array.themes).getIndex(rand))
+        Log.d("SOMETHING", gpt.response)
+        val gson = Gson()
+        val jsonResponse = gson.fromJson(gpt.response, Map::class.java)
+        Log.d("SOMETHING", jsonResponse.get("activityName").toString())
     }
 
     fun setEndTime(endTime : LocalTime) {
@@ -32,23 +40,23 @@ class Activity(
         return this.picture
     }
 
-    fun getActivityTitle(): String {
+    fun getActivityTitle(): String? {
         return this.activityTitle
     }
 
-    fun getActivityDescription(): String {
+    fun getActivityDescription(): String? {
         return this.activityDescription
     }
 
-    fun getJournalLog(): String {
+    fun getJournalLog(): String? {
         return this.journalLog
     }
 
-    fun getDateOfActivity(): LocalDate {
+    fun getDateOfActivity(): LocalDate? {
         return this.dateOfActivity
     }
 
-    fun getStartTime(): LocalTime {
+    fun getStartTime(): LocalTime? {
         return this.startTime
     }
 

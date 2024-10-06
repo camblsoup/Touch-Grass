@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.mytestapplication.models.Activity
 import com.example.mytestapplication.ui.theme.MyTestApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,6 +36,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         createNotificationChannel()
+        var activity = Activity(this, this.resources)
+        activity.generateActivity()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {

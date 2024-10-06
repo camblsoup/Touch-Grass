@@ -22,7 +22,7 @@ import okhttp3.Response;
 
 public class GPT{
 
-    String response;
+    private String response;
 
     public static final MediaType JSON
             = MediaType.get("application/json; charset=utf-8");
