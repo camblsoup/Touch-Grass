@@ -1,23 +1,34 @@
 package com.example.mytestapplication.models
 
+import android.content.Context
+import android.content.res.Resources
+import com.example.mytestapplication.R
 import java.time.LocalDate
 import java.time.LocalTime
+import kotlin.random.Random
 
 class Activity(
-    private var picture: String,
-    private var activityTitle: String,
-    private var activityDescription: String,
-    private var journalLog: String,
-    private var dateOfActivity: LocalDate,
-    private var startTime: LocalTime
+    val context : Context,
+    val resources: Resources
 ) {
+    private var activityTitle: String? = null
+    private var activityDescription: String? = null
+    private var journalLog: String? = null
+    private var dateOfActivity: LocalDate? = null
+    private var startTime: LocalTime? = null
     private var endTime : LocalTime? = null
+    private var picture: String? = null
+
+    fun generateActivity() {
+        val rand = (0..5).random()
+        GPT.callAPI(context.getString(R.string.default_prompt) + resources.obtainTypedArray(R.array.themes).getIndex(rand))
+    }
 
     fun setEndTime(endTime : LocalTime) {
         this.endTime = endTime
     }
 
-    fun getPicture(): String {
+    fun getPicture(): String? {
         return this.picture
     }
 
